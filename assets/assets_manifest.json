@@ -1,0 +1,114 @@
+{
+  "generated_at": "2026-11-16T21:06:28.795585+00:00",
+  "total_assets": 18,
+  "assets": [
+    {
+      "map_id": "01-mega-obby",
+      "type": "icon_svg",
+      "dimensions": "512x512",
+      "file": "01-mega-obby-icon-512x512.svg"
+    },
+    {
+      "map_id": "01-mega-obby",
+      "type": "icon_png",
+      "dimensions": "512x512",
+      "file": "01-mega-obby-icon-512x512.png"
+    },
+    {
+      "map_id": "01-mega-obby",
+      "type": "thumbnail_svg",
+      "dimensions": "1920x1080",
+      "file": "01-mega-obby-thumbnail-1920x1080.svg"
+    },
+    {
+      "map_id": "01-mega-obby",
+      "type": "thumbnail_png",
+      "dimensions": "1920x1080",
+      "file": "01-mega-obby-thumbnail-1920x1080.png"
+    },
+    {
+      "map_id": "02-crypto-ai-tycoon",
+      "type": "icon_svg",
+      "dimensions": "512x512",
+      "file": "02-crypto-ai-tycoon-icon-512x512.svg"
+    },
+    {
+      "map_id": "02-crypto-ai-tycoon",
+      "type": "icon_png",
+      "dimensions": "512x512",
+      "file": "02-crypto-ai-tycoon-icon-512x512.png"
+    },
+    {
+      "map_id": "02-crypto-ai-tycoon",
+      "type": "thumbnail_svg",
+      "dimensions": "1920x1080",
+      "file": "02-crypto-ai-tycoon-thumbnail-1920x1080.svg"
+    },
+    {
+      "map_id": "02-crypto-ai-tycoon",
+      "type": "thumbnail_png",
+      "dimensions": "1920x1080",
+      "file": "02-crypto-ai-tycoon-thumbnail-1920x1080.png"
+    },
+    {
+      "map_id": "03-aura-rng-simulator",
+      "type": "icon_svg",
+      "dimensions": "512x512",
+      "file": "03-aura-rng-simulator-icon-512x512.svg"
+    },
+    {
+      "map_id": "03-aura-rng-simulator",
+      "type": "icon_png",
+      "dimensions": "512x512",
+      "file": "03-aura-rng-simulator-icon-512x512.png"
+    },
+    {
+      "map_id": "03-aura-rng-simulator",
+      "type": "thumbnail_svg",
+      "dimensions": "1920x1080",
+      "file": "03-aura-rng-simulator-thumbnail-1920x1080.svg"
+    },
+    {
+      "map_id": "03-aura-rng-simulator",
+      "type": "thumbnail_png",
+      "dimensions": "1920x1080",
+      "file": "03-aura-rng-simulator-thumbnail-1920x1080.png"
+    },
+    {
+      "map_id": "twitch-24-7",
+      "type": "channel_svg",
+      "dimensions": "1920x1080",
+      "file": "twitch-24-7-banner-1920x1080.svg"
+    },
+    {
+      "map_id": "twitch-24-7",
+      "type": "channel_png",
+      "dimensions": "1920x1080",
+      "file": "twitch-24-7-banner-1920x1080.png"
+    },
+    {
+      "map_id": "twitch-24-7",
+      "type": "channel_svg",
+      "dimensions": "1920x1080",
+      "file": "twitch-24-7-offline-screen-1920x1080.svg"
+    },
+    {
+      "map_id": "twitch-24-7",
+      "type": "channel_png",
+      "dimensions": "1920x1080",
+      "file": "twitch-24-7-offline-screen-1920x1080.png"
+    },
+    {
+      "map_id": "twitch-24-7",
+      "type": "channel_svg",
+      "dimensions": "1200x480",
+      "file": "twitch-24-7-profile-banner-1200x480.svg"
+    },
+    {
+      "map_id": "twitch-24-7",
+      "type": "channel_png",
+      "dimensions": "1200x480",
+      "file": "twitch-24-7-profile-banner-1200x480.png"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "pix_key": "pix@robloxempirehub.com.br",
+  "merchant_name": "ROBLOX EMPIRE HUB",
+  "merchant_city": "SAO PAULO",
+  "txid_prefix": "RBX3IN1",
+  "products": {
+    "bundle_3in1": {
+      "id": "bundle_3in1",
+      "title": "Pacote Completo 3-em-1: 3 Mapas Roblox (.rbxlx) + Scripts Luau + 18 Thumbnails + 90 Roteiros Virais",
+      "price_brl": 147.00,
+      "price_usd": 39.00,
+      "txid": "RBXBUNDLE3IN1"
+    },
+    "map1_obby": {
+      "id": "map1_obby",
+      "title": "Mapa 1: Mega Brainrot & Lava Tower Obby + VIP Troll (.rbxlx Completo)",
+      "price_brl": 67.00,
+      "price_usd": 19.00,
+      "txid": "RBXMAP1OBBY"
+    },
+    "map2_tycoon": {
+      "id": "map2_tycoon",
+      "title": "Mapa 2: Viral Streamer & AI Empire Tycoon (.rbxlx Completo)",
+      "price_brl": 67.00,
+      "price_usd": 19.00,
+      "txid": "RBXMAP2TYCOON"
+    },
+    "map3_rng": {
+      "id": "map3_rng",
+      "title": "Mapa 3: 1 in 1,000,000 Aura RNG + Admin Island (.rbxlx Completo)",
+      "price_brl": 67.00,
+      "price_usd": 19.00,
+      "txid": "RBXMAP3RNG"
+    },
+    "livepix_vip": {
+      "id": "livepix_vip",
+      "title": "Apoio Live 24/7 + Evento 2x Luck / Nuke Ao Vivo no Servidor",
+      "price_brl": 10.00,
+      "price_usd": 3.00,
+      "txid": "RBXLIVEVIP"
+    }
+  },
+  "checkout_links": {
+    "gumroad_bundle_url": "https://gumroad.com/l/roblox-3in1-monetized-bundle",
+    "stripe_bundle_url": "https://buy.stripe.com/test_roblox_empire_3in1_bundle",
+    "builtbybit_url": "https://builtbybit.com/resources/roblox-3in1-monetized-maps-bundle",
+    "fiverr_url": "https://www.fiverr.com/s/roblox-turnkey-monetized-games",
+    "livepix_url": "https://livepix.gg/seucanal",
+    "discord_delivery_url": "https://discord.gg/seuservidorvip"
+  },
+  "crypto_wallets": {
+    "usdt_trc20": "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb",
+    "solana": "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
+    "bitcoin": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+  },
+  "stream_config": {
+    "twitch_channel": "robloxempire247",
+    "kick_channel": "robloxempire247",
+    "youtube_channel": "@RobloxEmpireHub247"
+  },
+  "roblox_games": {
+    "map1_url": "https://www.roblox.com/games/0000000001/Mega-Brainrot-Lava-Tower-Obby",
+    "map2_url": "https://www.roblox.com/games/0000000002/Viral-Streamer-AI-Empire-Tycoon",
+    "map3_url": "https://www.roblox.com/games/0000000003/Aura-RNG-Admin-Island"
+  },
+  "affiliate_links": {
+    "robux_giftcard": "https://amzn.to/robux-gift-card-oficial",
+    "instant_gaming": "https://www.instant-gaming.com/?igr=passive247",
+    "amazon_gamer": "https://amzn.to/setup-gamer-custo-beneficio"
+  },
+  "promo_codes": [
+    {
+      "code": "FREECOINS2026",
+      "reward": "+5.000 Moedas Iniciais nos 3 Mapas",
+      "map": "Todos os 3 Mapas"
+    },
+    {
+      "code": "VIPTYCOON",
+      "reward": "+$15.000 Cash + Boost 2x Dropper (15 min)",
+      "map": "Viral Streamer & AI Empire Tycoon"
+    },
+    {
+      "code": "LUCKYAURA",
+      "reward": "Poção Heavenly 10x Luck + 2.500 Gemas",
+      "map": "1 in 1,000,000 Aura RNG Simulator"
+    },
+    {
+      "code": "TWITCH247",
+      "reward": "Gravidade Zero + 5.000 Moedas VIP",
+      "map": "Mega Brainrot & Lava Tower Obby"
+    }
+  ]
+}

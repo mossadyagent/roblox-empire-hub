@@ -1,0 +1,11 @@
+# Protect proprietary Roblox place files and local secrets from ever being committed
+*.rbxlx
+*.rbxl
+*.rbxm
+*.rbxmx
+*secret*
+*.key
+*.pem
+.env
+__pycache__/
+*.pyc

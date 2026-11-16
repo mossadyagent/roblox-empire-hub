@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roblox Empire Hub — 3-in-1 Monetized Maps Storefront, Web Arcade & 24/7 Live Hub</title>
+  <meta name="description" content="Play Mega Brainrot Obby, AI Streamer Tycoon & Divine Aura RNG right in your browser, claim promo codes, watch the 24/7 stream, or get the complete 3-in-1 Turnkey Roblox Studio (.rbxlx) Bundle via PIX, Crypto, or Stripe/Gumroad!" />
+  <link rel="icon" type="image/png" href="./assets/01-mega-obby-icon-512x512.png" />
+  <style>
+    :root {
+      --bg-dark: #070a12;
+      --bg-card: #0f1626;
+      --bg-card-hover: #151f36;
+      --border: #1e293b;
+      --neon-cyan: #00f5d4;
+      --neon-blue: #38bdf8;
+      --neon-purple: #a855f7;
+      --neon-pink: #ec4899;
+      --neon-gold: #fde047;
+      --neon-green: #22c55e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Top Sticky Navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 10, 18, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+
+    .brand img {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      border: 2px solid var(--neon-cyan);
+    }
+
+    .brand span {
+      background: linear-gradient(90deg, var(--neon-cyan), var(--neon-blue), var(--neon-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      padding: 8px 15px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: #131c31;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--neon-cyan);
+      color: var(--neon-cyan);
+    }
+
+    .nav-btn.cta {
+      background: linear-gradient(90deg, #00b894, #00f5d4);
+      color: #041311;
+      border: none;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 52px 0 36px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.16), transparent 65%);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(0, 245, 212, 0.12);
+      border: 1px solid var(--neon-cyan);
+      color: var(--neon-cyan);
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4.2vw, 3.3rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 .highlight {
+      background: linear-gradient(90deg, var(--neon-gold), var(--neon-cyan), var(--neon-pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      color: var(--text-muted);
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 1rem;
+      background: linear-gradient(90deg, #22c55e, #00f5d4);
+      color: #03150e;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 24px rgba(0, 245, 212, 0.35);
+      transition: transform 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 1rem;
+      background: #131c31;
+      color: var(--text-main);
+      border: 1px solid var(--neon-blue);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-secondary:hover {
+      background: #1b2847;
+    }
+
+    /* Section Headers */
+    .section {
+      padding: 42px 0;
+    }
+
+    .section-header {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .section-header h2 {
+      font-size: 1.75rem;
+      font-weight: 900;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Web Arcade Box */
+    .arcade-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+    }
+
+    .arcade-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .arcade-tab-btn {
+      flex: 1;
+      min-width: 220px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: #131d33;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .arcade-tab-btn.active-tab {
+      background: linear-gradient(90deg, rgba(0, 245, 212, 0.18), rgba(56, 189, 248, 0.18));
+      border-color: var(--neon-cyan);
+      color: var(--neon-cyan);
+      box-shadow: 0 0 18px rgba(0, 245, 212, 0.2);
+    }
+
+    .canvas-container {
+      width: 100%;
+      background: #050811;
+      border-radius: 12px;
+      border: 2px solid #1e293b;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    #arcade-canvas {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      aspect-ratio: 900 / 390;
+      display: block;
+    }
+
+    .arcade-controls-bar {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .ctrl-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .ctrl-btn {
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      background: #17223b;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.86rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .ctrl-btn:hover {
+      border-color: var(--neon-gold);
+      background: #1f2e4d;
+    }
+
+    .ctrl-btn.danger {
+      background: linear-gradient(90deg, #dc2626, #f97316);
+      border: none;
+    }
+
+    .ctrl-btn.gold {
+      background: linear-gradient(90deg, #f59e0b, #fde047);
+      color: #090d16;
+      border: none;
+    }
+
+    .promo-redeem-box {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .promo-redeem-box input {
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #090d16;
+      color: var(--neon-cyan);
+      font-weight: 700;
+      width: 170px;
+    }
+
+    /* 3 Maps Product Grid */
+    .maps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 22px;
+    }
+
+    .map-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .map-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--neon-blue);
+    }
+
+    .map-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .map-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .map-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      background: rgba(56, 189, 248, 0.14);
+      color: var(--neon-blue);
+      margin-bottom: 10px;
+    }
+
+    .map-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .map-specs {
+      list-style: none;
+      margin: 12px 0 18px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .map-specs li {
+      margin-bottom: 6px;
+    }
+
+    .map-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .map-actions a,
+    .map-actions button {
+      flex: 1;
+      text-align: center;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    /* Checkout Section (PIX + Crypto + Stripe/Gumroad) */
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 920px) {
+      .checkout-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .checkout-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .tier-selector {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 16px 0 22px;
+    }
+
+    .tier-btn {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #111a2e;
+      border: 2px solid var(--border);
+      color: var(--text-main);
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.15s ease;
+    }
+
+    .tier-btn.active-tier {
+      border-color: var(--neon-cyan);
+      background: rgba(0, 245, 212, 0.1);
+    }
+
+    .tier-price {
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--neon-cyan);
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    .pix-qr-box {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      background: #0a101d;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+      margin-bottom: 18px;
+    }
+
+    #pix-qr-canvas {
+      border-radius: 10px;
+      border: 3px solid var(--neon-cyan);
+      background: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .pix-copy-area {
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .pix-copy-area textarea {
+      width: 100%;
+      height: 74px;
+      background: #060911;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      color: var(--neon-cyan);
+      font-family: monospace;
+      font-size: 0.8rem;
+      padding: 10px;
+      resize: none;
+    }
+
+    .payment-badges {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .pay-link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      background: #17223b;
+      border: 1px solid #334155;
+      color: #ffffff;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .pay-link-btn:hover {
+      border-color: var(--neon-gold);
+      background: #1e2d4d;
+    }
+
+    /* 24/7 Live Stream & Affiliate Hub */
+    .stream-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 22px;
+    }
+
+    @media (max-width: 920px) {
+      .stream-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stream-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .affiliate-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .affiliate-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .promo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .promo-card {
+      background: #111a2e;
+      border: 1px dashed var(--neon-gold);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Floating Toast */
+    #portal-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background: #064e3b;
+      border: 2px solid var(--neon-cyan);
+      color: #ffffff;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65);
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: all 0.25s ease;
+    }
+
+    #portal-toast.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="navbar">
+    <div class="brand">
+      <img src="./assets/01-mega-obby-icon-512x512.png" alt="Roblox Empire Hub" />
+      <span>ROBLOX EMPIRE HUB 24/7</span>
+    </div>
+    <div class="nav-links">
+      <a href="#web-arcade" class="nav-btn">🎮 Web Arcade (3 Jogos)</a>
+      <a href="#bundle-storefront" class="nav-btn">📦 Catálogo .RBXLX</a>
+      <a href="#live-stream-hub" class="nav-btn">📺 Live 24/7 & Códigos</a>
+      <a href="#pix-checkout" class="nav-btn cta">⚡ Comprar Pacote 3-em-1 (R$ 147 / $39)</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Hero Banner -->
+    <header class="hero">
+      <div class="hero-badge">🔥 ECOSSISTEMA COMPLETO DE JOGOS ROBLOX + ARCADE WEB + LIVE 24/7</div>
+      <h1>
+        Jogue no Navegador ou Baixe os <span class="highlight">3 Mapas Roblox Prontos p/ Lucrar</span>
+      </h1>
+      <p>
+        Teste gratuitamente as versões Web de <strong>Mega Brainrot Lava Obby</strong>, <strong>AI Streamer Empire Tycoon</strong> e <strong>Divine Aura RNG Simulator</strong> abaixo, resgate códigos VIP ou adquira o pacote completo com os arquivos <code>.rbxlx</code> + Scripts Luau + 18 Thumbnails + 90 Roteiros Virais com entrega imediata!
+      </p>
+      <div class="hero-actions">
+        <a href="#pix-checkout" class="btn-primary">⚡ Adquirir Pacote 3-em-1 Completo (R$ 147 PIX / $39 USD)</a>
+        <a href="#web-arcade" class="btn-secondary">🎮 Jogar os 3 Mini-Games Agora no Navegador</a>
+      </div>
+    </header>
+
+    <!-- SECTION 1: PLAYABLE HTML5 CANVAS WEB ARCADE -->
+    <section id="web-arcade" class="section">
+      <div class="section-header">
+        <div>
+          <h2>🎮 Playable Web Arcade — Teste os 3 Jogos Agora (60 FPS HTML5)</h2>
+          <p>Alterne entre os 3 títulos abaixo, use os botões interativos e resgate códigos promocionais em tempo real!</p>
+        </div>
+        <div class="promo-redeem-box">
+          <input type="text" id="arcade-promo-input" placeholder="Código: FREECOINS2026" value="FREECOINS2026" />
+          <button class="ctrl-btn gold" onclick="redeemArcadePromoCode()">🎁 Resgatar Código</button>
+        </div>
+      </div>
+
+      <div class="arcade-wrapper">
+        <div class="arcade-tabs">
+          <button class="arcade-tab-btn active-tab" data-arcade-tab="obby" onclick="switchArcadeGame('obby')">
+            🌋 1. Mega Brainrot Lava Obby (Web Edition)
+          </button>
+          <button class="arcade-tab-btn" data-arcade-tab="tycoon" onclick="switchArcadeGame('tycoon')">
+            💻 2. AI Streamer Empire Tycoon (Web Edition)
+          </button>
+          <button class="arcade-tab-btn" data-arcade-tab="rng" onclick="switchArcadeGame('rng')">
+            ✨ 3. Divine Aura RNG Simulator (Web Edition)
+          </button>
+        </div>
+
+        <div class="canvas-container">
+          <canvas id="arcade-canvas" width="900" height="390"></canvas>
+        </div>
+
+        <!-- Contextual Controls per Game -->
+        <div class="arcade-controls-bar">
+          <!-- Obby Controls -->
+          <div class="ctrl-group" data-arcade-controls="obby" style="display: flex;">
+            <button class="ctrl-btn" onmousedown="arcadeAction('obby_jump')">⬆️ Pular / Duplo Pulo (Espaço)</button>
+            <button class="ctrl-btn gold" onclick="arcadeAction('obby_skip')">⚡ Skip Stage (49 R$)</button>
+            <button class="ctrl-btn" onclick="arcadeAction('obby_carpet')">🌈 Tapete VIP Voador (Toggle)</button>
+            <button class="ctrl-btn" onclick="arcadeAction('obby_afk')">🪙 Zona AFK Auto-Play (Toggle)</button>
+            <button class="ctrl-btn danger" onclick="arcadeAction('obby_nuke')">💣 TROLL NUKE SERVER (+500 Moedas)</button>
+          </div>
+
+          <!-- Tycoon Controls -->
+          <div class="ctrl-group" data-arcade-controls="tycoon" style="display: none;">
+            <button class="ctrl-btn gold" onclick="arcadeAction('tycoon_click')">🎥 Fazer Live Manual (+$25 Cash)</button>
+            <button class="ctrl-btn" id="btn-tycoon-dropper" onclick="arcadeAction('tycoon_buy_dropper')">🖥️ Comprar Próximo Dropper</button>
+            <button class="ctrl-btn" id="btn-tycoon-upgrader" onclick="arcadeAction('tycoon_buy_upgrader')">⚡ Comprar Próximo Gate Upgrader</button>
+            <button class="ctrl-btn danger" onclick="arcadeAction('tycoon_rebirth')">🔄 Rebirth (+100% Multiplicador)</button>
+          </div>
+
+          <!-- RNG Controls -->
+          <div class="ctrl-group" data-arcade-controls="rng" style="display: none;">
+            <button class="ctrl-btn gold" onclick="arcadeAction('rng_roll')">🎲 ROLL AURA (Girar Agora)</button>
+            <button class="ctrl-btn" onclick="arcadeAction('rng_autoroll')">🤖 Auto-Roll VIP (Toggle)</button>
+            <button class="ctrl-btn" onclick="arcadeAction('rng_quickroll')">⚡ Quick-Roll (Sem Animação)</button>
+            <button class="ctrl-btn danger" onclick="arcadeAction('rng_heavenly')">🧪 Poção Heavenly 10x Luck (+10 Rolls)</button>
+          </div>
+
+          <div>
+            <a href="#pix-checkout" class="ctrl-btn" style="border-color: var(--neon-cyan); color: var(--neon-cyan);">
+              📦 Baixar Este Mapa Completo (.rbxlx) ➔
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: TURNKEY ROBLOX STUDIO (.RBXLX) STOREFRONT -->
+    <section id="bundle-storefront" class="section">
+      <div class="section-header">
+        <div>
+          <h2>📦 Catálogo Turnkey Roblox Studio — Prontos para Publicar e Monetizar</h2>
+          <p>Arquivos 100% validados com geometria 3D completa, scripts Luau embutidos, DataStoreService e Gamepasses pré-configurados.</p>
+        </div>
+      </div>
+
+      <div class="maps-grid">
+        <!-- Map 1 Card -->
+        <div class="map-card">
+          <img class="map-thumb" src="./assets/01-mega-obby-thumbnail-1920x1080.png" alt="Mega Brainrot & Lava Tower Obby" />
+          <div class="map-body">
+            <div>
+              <span class="map-tag">MAPA 1 • 35 FASES + SISTEMA TROLL</span>
+              <div class="map-title">Mega Brainrot & Lava Tower Obby + VIP Troll</div>
+              <ul class="map-specs">
+                <li>✅ <strong>291 Partes 3D</strong>: Spawn Lobby, VIP Lounge, Zona AFK Premium Payouts & Ilha dos Vencedores.</li>
+                <li>✅ <strong>35 Fases Procedurais</strong>: Pontes de Vidro, Lasers Giratórios, Lava Subindo e Pads que Somem.</li>
+                <li>✅ <strong>Alta Conversão</strong>: Modal automático <em>"Morreu 3x? Pule esta fase!"</em> + Painel Nuke Server (299 R$).</li>
+              </ul>
+            </div>
+            <div class="map-actions">
+              <button class="btn-secondary" onclick="selectCheckoutProduct('map1_obby'); document.getElementById('pix-checkout').scrollIntoView({behavior:'smooth'});">
+                Individual: R$ 67 / $19
+              </button>
+              <button class="btn-primary" onclick="selectCheckoutProduct('bundle_3in1'); document.getElementById('pix-checkout').scrollIntoView({behavior:'smooth'});">
+                Levar no Pacote 3-em-1
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map 2 Card -->
+        <div class="map-card">
+          <img class="map-thumb" src="./assets/02-crypto-ai-tycoon-thumbnail-1920x1080.png" alt="Viral Streamer & AI Empire Tycoon" />
+          <div class="map-body">
+            <div>
+              <span class="map-tag">MAPA 2 • 4 PLOTS + ARENA KOTH</span>
+              <div class="map-title">Viral Streamer & AI Empire Tycoon</div>
+              <ul class="map-specs">
+                <li>✅ <strong>525 Partes 3D</strong>: 4 Plots completos ao redor da Arena Central King-of-the-Hill (+50% Cash).</li>
+                <li>✅ <strong>6 Droppers + 3 Gates</strong>: Do PC Básico ao Servidor Quântico e Estúdio Holográfico de IA.</li>
+                <li>✅ <strong>Retenção Máxima</strong>: Popup de Ganhos Offline (com botão 2x por 49 R$) + Feixe Guia 3D.</li>
+              </ul>
+            </div>
+            <div class="map-actions">
+              <button class="btn-secondary" onclick="selectCheckoutProduct('map2_tycoon'); document.getElementById('pix-checkout').scrollIntoView({behavior:'smooth'});">
+                Individual: R$ 67 / $19
+              </button>
+              <button class="btn-primary" onclick="selectCheckoutProduct('bundle_3in1'); document.getElementById('pix-checkout').scrollIntoView({behavior:'smooth'});">
+                Levar no Pacote 3-em-1
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map 3 Card -->
+        <div class="map-card">
+          <img class="map-thumb" src="./assets/03-aura-rng-simulator-thumbnail-1920x1080.png" alt="1 in 1,000,000 Aura RNG Simulator" />
+          <div class="map-body">
+            <div>
+              <span class="map-tag">MAPA 3 • 30 AURAS + CUTSCENES</span>
+              <div class="map-title">1 in 1,000,000 Aura RNG + Admin Island</div>
+              <ul class="map-specs">
+                <li>✅ <strong>30 Auras Procedurais</strong>: De <em>Breeze Whisper (1 in 2)</em> até <em>DIVINE BRAINROT: GENESIS (1 in 10M)</em>.</li>
+                <li>✅ <strong>4 Ilhas de Biomas + Caldeirão</strong>: Cyberpunk, Void, Heaven e Lava + Círculo AFK 2x Luck.</li>
+                <li>✅ <strong>Anúncio Global</strong>: Cutscene cinematográfica + <code>MessagingService</code> em todos os servidores!</li>
+              </ul>
+            </div>
+            <div class="map-actions">
+              <button class="btn-secondary" onclick="selectCheckoutProduct('map3_rng'); document.getElementById('pix-checkout').scrollIntoView({behavior:'smooth'});">
+                Individual: R$ 67 / $19
+              </button>
+              <button class="btn-primary" onclick="selectCheckoutProduct('bundle_3in1'); document.getElementById('pix-checkout').scrollIntoView({behavior:'smooth'});">
+                Levar no Pacote 3-em-1
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: INSTANT PIX (EMVCo BRCode) + CRYPTO + INTERNATIONAL CHECKOUT -->
+    <section id="pix-checkout" class="section">
+      <div class="section-header">
+        <div>
+          <h2>⚡ Checkout Instantâneo — PIX Copia e Cola, Cripto & Cartão Internacional</h2>
+          <p>Escolha seu pacote abaixo. O QR Code e o payload EMVCo PIX (com CRC16 oficial do Banco Central) são gerados na hora!</p>
+        </div>
+      </div>
+
+      <div class="checkout-grid">
+        <!-- Left Column: Product Tier Selector + International & Crypto -->
+        <div class="checkout-panel">
+          <h3 style="margin-bottom: 8px;">1. Selecione o Produto Desejado:</h3>
+          <div class="tier-selector">
+            <button class="tier-btn active-tier" data-product-btn="bundle_3in1" onclick="selectCheckoutProduct('bundle_3in1')">
+              <div>
+                <div style="font-size: 0.75rem; font-weight: 800; color: var(--neon-gold);">⭐ PACOTE COMPLETO 3-EM-1 (ECONOMIZE 45%)</div>
+                <div style="font-weight: 800;">3 Mapas (.rbxlx) + Scripts Luau + 18 Artes HD + 90 Roteiros Virais</div>
+              </div>
+              <div class="tier-price">R$ 147,00 / $39</div>
+            </button>
+
+            <button class="tier-btn" data-product-btn="map1_obby" onclick="selectCheckoutProduct('map1_obby')">
+              <div>
+                <div style="font-weight: 800;">🌋 Mapa 1: Mega Brainrot & Lava Tower Obby (.rbxlx)</div>
+              </div>
+              <div class="tier-price">R$ 67,00 / $19</div>
+            </button>
+
+            <button class="tier-btn" data-product-btn="map2_tycoon" onclick="selectCheckoutProduct('map2_tycoon')">
+              <div>
+                <div style="font-weight: 800;">💻 Mapa 2: Viral Streamer & AI Empire Tycoon (.rbxlx)</div>
+              </div>
+              <div class="tier-price">R$ 67,00 / $19</div>
+            </button>
+
+            <button class="tier-btn" data-product-btn="map3_rng" onclick="selectCheckoutProduct('map3_rng')">
+              <div>
+                <div style="font-weight: 800;">✨ Mapa 3: 1 in 1,000,000 Aura RNG Simulator (.rbxlx)</div>
+              </div>
+              <div class="tier-price">R$ 67,00 / $19</div>
+            </button>
+
+            <button class="tier-btn" data-product-btn="livepix_vip" onclick="selectCheckoutProduct('livepix_vip')">
+              <div>
+                <div style="font-weight: 800;">🎙️ Apoio Live 24/7 + Ativar Evento 2x Luck / Nuke Ao Vivo</div>
+              </div>
+              <div class="tier-price">R$ 10,00 / $3</div>
+            </button>
+          </div>
+
+          <h3 style="margin-bottom: 8px;">2. Checkout Internacional & Marketplaces ($39 USD):</h3>
+          <div class="payment-badges">
+            <a id="btn-checkout-gumroad" href="https://gumroad.com/l/roblox-3in1-monetized-bundle" target="_blank" rel="noopener" class="pay-link-btn">
+              💳 Comprar via Gumroad ($39)
+            </a>
+            <a id="btn-checkout-stripe" href="https://buy.stripe.com/test_roblox_empire_3in1_bundle" target="_blank" rel="noopener" class="pay-link-btn">
+              🌐 Cartão / Apple Pay (Stripe)
+            </a>
+            <a id="btn-checkout-builtbybit" href="https://builtbybit.com/resources/roblox-3in1-monetized-maps-bundle" target="_blank" rel="noopener" class="pay-link-btn">
+              🧱 BuiltByBit Storefront
+            </a>
+            <a id="btn-checkout-fiverr" href="https://www.fiverr.com/s/roblox-turnkey-monetized-games" target="_blank" rel="noopener" class="pay-link-btn">
+              🟢 Encomendar no Fiverr
+            </a>
+          </div>
+
+          <h3 style="margin: 20px 0 8px;">3. Pagamento Instantâneo em Cripto (USDT / SOL / BTC):</h3>
+          <div class="payment-badges">
+            <button class="pay-link-btn" onclick="copyTextWithToast(window.STOREFRONT_CONFIG.crypto_wallets.usdt_trc20, 'Carteira USDT (TRC20)')">
+              💵 Copiar USDT (TRC20)
+            </button>
+            <button class="pay-link-btn" onclick="copyTextWithToast(window.STOREFRONT_CONFIG.crypto_wallets.solana, 'Carteira Solana (SOL)')">
+              🟣 Copiar Solana (SOL)
+            </button>
+            <button class="pay-link-btn" onclick="copyTextWithToast(window.STOREFRONT_CONFIG.crypto_wallets.bitcoin, 'Carteira Bitcoin (BTC)')">
+              🟠 Copiar Bitcoin (BTC)
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Live EMVCo PIX QR Code & Copia e Cola -->
+        <div class="checkout-panel">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="background: rgba(34,197,94,0.18); color: #4ade80; padding: 4px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 800;">
+              🇧🇷 PIX OFICIAL (EMVCo BRCode)
+            </span>
+            <span id="pix-crc16-display" style="font-family: monospace; font-size: 0.82rem; color: var(--text-muted);">
+              CRC16: 0x----
+            </span>
+          </div>
+
+          <div id="checkout-selected-title" style="font-weight: 800; font-size: 1.05rem; margin-bottom: 10px;">
+            Pacote Completo 3-em-1 (.rbxlx + Scripts Luau + 18 Thumbnails + 90 Roteiros)
+          </div>
+
+          <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 16px;">
+            <span id="checkout-price-brl" style="font-size: 2rem; font-weight: 900; color: var(--neon-cyan);">R$ 147,00</span>
+            <span id="checkout-price-usd" style="font-size: 1.1rem; color: var(--text-muted);">($39.00 USD)</span>
+          </div>
+
+          <div class="pix-qr-box">
+            <canvas id="pix-qr-canvas" width="176" height="176"></canvas>
+            <div style="flex: 1; min-width: 180px;">
+              <div style="font-weight: 800; margin-bottom: 6px; color: var(--neon-gold);">Escaneie pelo App do Seu Banco</div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">
+                Abra o aplicativo do Nubank, Inter, Itaú, Bradesco, PicPay ou Mercado Pago e escaneie o QR Code ao lado ou use o botão <strong>PIX Copia e Cola</strong> abaixo.
+              </p>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">
+                Chave Ativa: <strong id="active-pix-key-display" style="color: #fff;">pix@robloxempirehub.com.br</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="pix-copy-area">
+            <label style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 6px;">
+              Código PIX Copia e Cola (Padrão Banco Central):
+            </label>
+            <textarea id="pix-brcode-textarea" readonly onclick="this.select()"></textarea>
+            <button class="btn-primary" style="width: 100%; margin-top: 10px;" onclick="copyPixPayload()">
+              📋 COPIAR CÓDIGO PIX COPIA E COLA
+            </button>
+          </div>
+
+          <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <input
+              type="text"
+              id="custom-pix-key-input"
+              placeholder="Sua Chave PIX (Email/CPF/Tel/Aleatória)"
+              style="flex: 1; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border); background: #070a12; color: #fff; font-size: 0.82rem;"
+            />
+            <button class="ctrl-btn" onclick="selectCheckoutProduct(currentSelectedProductId); showToast('✅ QR Code PIX atualizado com a chave informada!');">
+              🔄 Atualizar QR
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: 24/7 LIVE STREAM & AFFILIATE HUB -->
+    <section id="live-stream-hub" class="section">
+      <div class="section-header">
+        <div>
+          <h2>📺 Transmissão 24/7 Twitch / Kick & Central de Afiliados + Códigos</h2>
+          <p>Assista à nossa transmissão automatizada 24/7, resgate códigos dentro dos jogos e aproveite descontos oficiais!</p>
+        </div>
+      </div>
+
+      <div class="stream-grid">
+        <!-- Stream Player / Banner -->
+        <div class="stream-box">
+          <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000;">
+            <img
+              src="./assets/twitch-24-7-banner-1920x1080.png"
+              alt="24/7 Twitch & Kick Stream Overlay"
+              style="width: 100%; height: 100%; object-fit: cover;"
+            />
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(7,10,18,0.92), rgba(7,10,18,0.25)); display: flex; flex-direction: column; justify-content: flex-end; padding: 22px;">
+              <span style="background: #ef4444; color: #fff; padding: 4px 10px; border-radius: 6px; font-weight: 900; font-size: 0.78rem; width: fit-content; margin-bottom: 8px;">
+                🔴 AO VIVO 24/7 • ROBLOX AFK & LO-FI HUB
+              </span>
+              <h3 style="font-size: 1.35rem; margin-bottom: 6px;">Canal Oficial 24/7: Mega Obby, Viral Streamer Tycoon & Aura RNG</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px;">
+                Digite <code>!mapa1</code>, <code>!mapa2</code>, <code>!mapa3</code>, <code>!robux</code> ou <code>!pix</code> no chat da live para receber recompensas!
+              </p>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://www.twitch.tv/directory/category/roblox" target="_blank" rel="noopener" class="ctrl-btn gold">
+                  🟣 Abrir na Twitch TV
+                </a>
+                <a href="https://kick.com/categories/games/roblox" target="_blank" rel="noopener" class="ctrl-btn" style="border-color: #22c55e; color: #4ade80;">
+                  🟢 Abrir na Kick.com
+                </a>
+                <a href="https://livepix.gg/seucanal" target="_blank" rel="noopener" class="ctrl-btn">
+                  💸 Enviar LivePix com Voz na Tela
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Affiliate Deals Column -->
+        <div class="affiliate-list">
+          <div class="affiliate-card">
+            <div>
+              <div style="font-size: 0.75rem; font-weight: 800; color: var(--neon-cyan);">OFICIAL • ENTREGA IMEDIATA</div>
+              <div style="font-weight: 800; font-size: 1.02rem;">💎 Gift Cards Oficiais de Robux (Roblox)</div>
+              <div style="font-size: 0.84rem; color: var(--text-muted);">Resgate créditos Robux direto na sua conta com bônus exclusivo.</div>
+            </div>
+            <a href="https://amzn.to/robux-gift-card-oficial" target="_blank" rel="noopener" class="ctrl-btn gold">Ver Oferta</a>
+          </div>
+
+          <div class="affiliate-card">
+            <div>
+              <div style="font-size: 0.75rem; font-weight: 800; color: var(--neon-gold);">ATÉ 70% DE DESCONTO</div>
+              <div style="font-weight: 800; font-size: 1.02rem;">🎮 Jogos PC, Steam, Xbox & PSN (Instant Gaming)</div>
+              <div style="font-size: 0.84rem; color: var(--text-muted);">Chaves originais com ativação instantânea e suporte 24/7.</div>
+            </div>
+            <a href="https://www.instant-gaming.com/?igr=passive247" target="_blank" rel="noopener" class="ctrl-btn">Descontos</a>
+          </div>
+
+          <div class="affiliate-card">
+            <div>
+              <div style="font-size: 0.75rem; font-weight: 800; color: var(--neon-purple);">AMAZON GAMER</div>
+              <div style="font-weight: 800; font-size: 1.02rem;">🎧 Periféricos RGB, Mouses Ultra-Leves & Headsets</div>
+              <div style="font-size: 0.84rem; color: var(--text-muted);">O setup custo-benefício recomendado para criadores e gamers.</div>
+            </div>
+            <a href="https://amzn.to/setup-gamer-custo-beneficio" target="_blank" rel="noopener" class="ctrl-btn">Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promo Codes Bar -->
+      <div class="promo-grid">
+        <div class="promo-card">
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">TODOS OS 3 MAPAS</div>
+            <div style="font-weight: 900; font-size: 1.1rem; color: var(--neon-gold);">FREECOINS2026</div>
+            <div style="font-size: 0.8rem; color: var(--neon-cyan);">+5.000 Moedas Iniciais</div>
+          </div>
+          <button class="ctrl-btn" onclick="copyTextWithToast('FREECOINS2026', 'Código FREECOINS2026')">Copiar</button>
+        </div>
+
+        <div class="promo-card">
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">VIRAL STREAMER TYCOON</div>
+            <div style="font-weight: 900; font-size: 1.1rem; color: var(--neon-gold);">VIPTYCOON</div>
+            <div style="font-size: 0.8rem; color: var(--neon-cyan);">+$15.000 Cash + 2x Dropper</div>
+          </div>
+          <button class="ctrl-btn" onclick="copyTextWithToast('VIPTYCOON', 'Código VIPTYCOON')">Copiar</button>
+        </div>
+
+        <div class="promo-card">
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">DIVINE AURA RNG</div>
+            <div style="font-weight: 900; font-size: 1.1rem; color: var(--neon-gold);">LUCKYAURA</div>
+            <div style="font-size: 0.8rem; color: var(--neon-cyan);">Poção Heavenly 10x Luck</div>
+          </div>
+          <button class="ctrl-btn" onclick="copyTextWithToast('LUCKYAURA', 'Código LUCKYAURA')">Copiar</button>
+        </div>
+
+        <div class="promo-card">
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">MEGA BRAINROT OBBY</div>
+            <div style="font-weight: 900; font-size: 1.1rem; color: var(--neon-gold);">TWITCH247</div>
+            <div style="font-size: 0.8rem; color: var(--neon-cyan);">Coil Gravidade + 5.000 Moedas</div>
+          </div>
+          <button class="ctrl-btn" onclick="copyTextWithToast('TWITCH247', 'Código TWITCH247')">Copiar</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Floating Notification Toast -->
+  <div id="portal-toast">✅ Copiado com sucesso!</div>
+
+  <footer>
+    <p><strong>ROBLOX EMPIRE HUB 24/7</strong> — Storefront Oficial, Web Arcade HTML5 & Motor de Lives Automatizado.</p>
+    <p style="margin-top: 6px;">Os arquivos fonte proprietários (<code>.rbxlx</code>) são entregues exclusivamente aos compradores verificados após confirmação via PIX, Stripe, Gumroad ou Cripto.</p>
+  </footer>
+
+  <script src="./pix.js"></script>
+  <script src="./games.js"></script>
+</body>
+</html>
